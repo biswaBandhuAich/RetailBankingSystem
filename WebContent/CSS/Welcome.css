@@ -1,0 +1,137 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background-color:#96cdcd;
+   	background-size: cover;
+}
+
+.site {
+	
+	display: grid;
+	grid-template-columns: 20% 1fr 20%;
+	grid-template-rows: 20% 60% 20%;
+	grid-template-areas: "header header header" "lside main rside"
+		"footer footer footer";
+	grid-gap: 10px;
+}
+
+.rside {
+	grid-area: rside;
+}
+
+.lside {
+	grid-area: lside;
+}
+
+.main {
+	width:60%;
+	background-color: #c0d9d9;
+	opacity:100%;
+	padding-bottom:20px;
+	border-radius: 15px 50px;
+	grid-area: main;
+	display: grid;
+	margin-left:15%;
+	grid-template-columns: 100%;
+	grid-template-rows: 40% 60%;
+	grid-template-areas: 
+	"myDIV3"
+	"maindiv";
+	
+}
+
+.myDIV3
+{
+		grid-area: .myDIV3;
+}
+.maindiv
+{
+		grid-area: maindiv;
+	
+}
+
+.footer {
+	grid-area: footer;
+  	bottom: 0;
+  	margin-left:35%;
+  	position:fixed;
+}
+
+.button {
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #388e8e;
+	border: none;
+	color: #ffffff;
+	text-align: center;
+	font-size: 15px;
+	padding: 20px;
+	width: 200px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button:hover span {
+	padding-right: 25px;
+}
+
+.button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+/**Forms**/
+input[type=text] {
+	width: 50%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=password] {
+	width: 50%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=submit] {
+	width: 20%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+.main, input[type=text]:focus {
+    width: 75%;
+}

@@ -1,0 +1,179 @@
+@CHARSET "ISO-8859-1";
+
+body {
+		background-color:#96cdcd;
+   		background-size: cover;
+}
+.site
+{
+	display: grid;
+	grid-template-columns: 20% 1fr 20%;
+	grid-template-rows: 20% 60% 20%;
+	grid-template-areas: 
+	"header header header"
+	"lside main rside"
+	"footer footer footer";
+	grid-gap: 10px;
+}
+.header
+{
+	grid-area: header;
+}
+.lside
+{
+		grid-area: .lside;
+	
+}
+.main
+{
+	grid-area:main;
+	background-color: #c0d9d9;
+	padding-bottom:25px;
+	margin-left:15%;
+	padding:25px;
+	width:auto;
+	border-radius: 35px;
+	
+	
+}
+.rside
+{
+		grid-area: .rside;
+	
+}
+
+input[type=text],select, textarea
+{
+    width: auto;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=number]
+{
+    width: auto;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=email]
+{
+    width: auto;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=password]
+{
+    width: auto;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+
+input[type=submit] {
+    background-color: #388e8e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: center;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.button {
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #388e8e;
+	border: none;
+	color: #ffffff;
+	text-align: center;
+	font-size: 15px;
+	padding: 10px;
+	width: auto;
+	cursor: pointer;
+	margin: 5px;
+}
+.footer {
+	grid-area: footer;
+	position: relative;
+  	bottom: 0;
+  	margin-right:5%;
+}
+.header
+{
+	grid-area:header;
+}
+.sitelogo
+{
+	width:100px;
+	height:50px;
+	float:left;
+	margin:5px;
+}
+.logout
+{
+	margin-right:4px;
+	float:right;
+}
+.topbar
+{
+	float:center;
+}
+input[name="search"] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('rupee.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[name="paisa"],input[name="balance"] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('rupee.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}

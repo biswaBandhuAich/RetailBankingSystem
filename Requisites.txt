@@ -1,0 +1,115 @@
+Customer-Executive options
+
+create new customer
+update existing customer----to view of US009
+delete existing customer---to view of US009
+view Customer Status for all customers
+create new account for existing
+delete existing customer
+view Account Status for all accounts
+pull information of a customer
+
+
+Cashier-Teller
+
+Deposit	
+Withdraw 
+Transfer
+Bank Statement
+
+
+dispatcher name=action
+for customer action value = "Customer"
+
+Action tag for cashier Pages
+Deposit: deposit
+Withdraw: withdraw
+Transfer: transfer
+Bank Statement: statement
+
+
+
+
+
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/CSS/Epoc.css">
+<script type="text/javascript"
+	src="<%=request.getContextPath()%>/js/firstval.js"></script>
+<title>Delete Customer</title>
+</head>
+<body>
+
+	<div class="site">
+		<div class="header"><%@include file="/JSP/Header.jsp"%></div>
+			<div class="main">
+				<center><h1>Please enter Id to De-Register Customer</h1></center>
+				<script language="Javascript">
+					function hideA() {
+
+						document.getElementById("A").style.visibility = "hidden";
+						document.getElementById("B").style.visibility = "visible";
+
+					}
+
+					function hideB() {
+						document.getElementById("B").style.visibility = "hidden";
+						document.getElementById("A").style.visibility = "visible";
+
+					}
+				</script>
+				<%
+					String message = (String) request.getAttribute("msg");
+				%>
+				<%
+					if (message != null) {
+				%>
+				<h2 style="color: red"><%=message%></h2>
+				<%
+					}
+				%>
+				<center><input type="radio" name="idselect" id="ssnid" onClick="hideB()"
+					checked>Customer SSN ID <input type="radio" name="idselect"
+					id="id" onClick="hideA()">Customer ID</center>
+				<div id="A" style="visibility:show">
+				<center>
+				<form
+					action="<%=request.getContextPath()%>/BankingControlServlet?action=deletecustomersearch"
+					method="post">
+					 
+						SSN ID: <input type="text" name="ssnid" required="true"><br>
+						<button class="button" type="submit">Delete By SSN ID</button>
+						</form>
+						</center>
+					</div>
+			<center>	
+			<form action="<%=request.getContextPath()%>/BankingControlServlet?action=deletecustomersearch"
+					method="post">
+				
+					<div id="B" style="visibility: hidden">
+						Customer ID: <input type="text" name="custid" required><br>
+						<button class="button" type="submit">Delete
+							By Customer ID</button>
+							</div>
+				</form></center>
+			</div>
+		<div class="footer"><%@ include file="/JSP/footer.jsp"%></div>
+	</div>
+</body>
+</html>
+
+
+
+
+https://www.cssscript.com/generic-country-state-dropdown-list-countries-js/
+
+
+
+select * from transaction_TeamC where accountno='100084048' and rownum<10 order by transactionid desc 
